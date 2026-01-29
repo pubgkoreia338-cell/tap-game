@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Anime Tap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: #0f0f1a;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 20px;
+    }
+    #score {
+      font-size: 32px;
+      margin: 15px 0;
+    }
+    #tap {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: url("https://i.imgur.com/7kCeK0F.png") center/cover;
+      margin: 40px auto;
+      box-shadow: 0 0 40px rgba(255,0,255,0.6);
+      transition: transform 0.1s;
+    }
+    #tap:active {
+      transform: scale(0.9);
+    }
+  </style>
+</head>
+<body>
+
+<h1>🔥 Anime Tap 🔥</h1>
+<div id="score">0</div>
+<div id="tap"></div>
+
+<script>
+  let score = 0;
+  const scoreEl = document.getElementById("score");
+  const tap = document.getElementById("tap");
+
+  tap.onclick = () => {
+    score++;
+    scoreEl.innerText = score;
+  };
+</script>
+
+</body>
+</html>
